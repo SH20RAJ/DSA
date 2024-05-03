@@ -19,6 +19,15 @@ void traverseLL(struct Node* head){
     
 }
 
+struct Node * insertAtBeginning(struct Node* head, int data){
+
+    struct Node * NewNode = (struct Node *) malloc(sizeof(struct Node)) ;
+    NewNode->data =  data;
+    NewNode->next = head;
+    return NewNode;
+
+}
+
 int main() {
 
 
@@ -40,6 +49,9 @@ int main() {
     
 
 
+    traverseLL(head);
+
+    head = insertAtBeginning(head, 200);
     traverseLL(head);
 
 
