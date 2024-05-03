@@ -28,6 +28,27 @@ struct Node * insertAtBeginning(struct Node* head, int data){
 
 }
 
+struct Node * insertAtEnd(struct Node* head, int data){
+    struct Node * NewNode = (struct Node *) malloc(sizeof(struct Node)) ;
+    NewNode->data =  data;
+    NewNode->next = NULL;
+    struct Node* ptr = head;
+    while (ptr->next!= NULL)
+    {
+        ptr = ptr->next;
+    }
+    ptr->next = NewNode;
+    return head;
+}
+
+
+struct Node * deleteAtBegginig(struct Node* head){
+    struct Node * ptr  = head;
+    head = head->next;
+    free(ptr);
+    return head;
+}
+
 int main() {
 
 
@@ -51,8 +72,15 @@ int main() {
 
     traverseLL(head);
 
-    head = insertAtBeginning(head, 200);
+    // head = insertAtBeginning(head, 200);
+    // traverseLL(head);
+
+    // head = insertAtEnd(head, 2000);
+    // traverseLL(head);
+
+    head = deleteAtBegginig(head);
     traverseLL(head);
+    
 
 
 
