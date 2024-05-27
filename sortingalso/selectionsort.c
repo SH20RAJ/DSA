@@ -5,6 +5,7 @@
 
 int main() {
     
+    
     int arr[] = {1,5,2,7,4,9};
     // sorted array = 1,2,4,5,7,9
     int length = sizeof(arr)/sizeof(arr[0]);
