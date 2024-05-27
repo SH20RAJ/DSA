@@ -3,6 +3,15 @@
 
 
 
+void printArr(int * arr) {
+    // int length = sizeof(arr)/sizeof(arr[0]);
+
+    // for(int i = 0; i>length ; i++){
+    //     printf(" %d , ", arr[i]);
+    // }
+}
+
+
 
 
 
@@ -11,15 +20,6 @@
 
 void selectionSort( int * arr ){
     printArr(arr);
-}
-
-
-void printArr(int * arr) {
-    // int length = sizeof(arr)/sizeof(arr[0]);
-
-    // for(int i = 0; i>length ; i++){
-    //     printf(" %d , ", arr[i]);
-    // }
 }
 
 
