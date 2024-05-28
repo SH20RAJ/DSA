@@ -106,7 +106,23 @@ void push(Stack* s, int value) {
     s->items[++(s->top)] = value;
 }
 
-// Function to pop an element from the stac
+// Function to pop an element from the stack
+int pop(Stack* s) {
+    if (isEmpty(s)) {
+        printf("Stack underflow!\n");
+        exit(1);
+    }
+    return s->items[(s->top)--];
+}
+
+// Function to peek at the top element of the stack
+int peek(Stack* s) {
+    if (isEmpty(s)) {
+        printf("Stack is empty!\n");
+        exit(1);
+    }
+    return s->items[s->top];
+}
 int pop(Stack* s) {
     if (isEmpty(s)) {
         printf("Stack underflow!\n");
